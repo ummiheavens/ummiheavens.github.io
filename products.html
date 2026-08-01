@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Ummi Heavens</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ================= TOP NAVIGATION ================= -->
+
+<header class="header">
+
+    <a href="index.html" class="header-logo">
+        <img src="assets/logo.png" alt="Ummi Heavens">
+    </a>
+
+    <nav class="header-nav">
+
+        <a href="index.html">Home</a>
+
+        <a href="index.html#about">About</a>
+
+        <a href="products.html" class="active">Products</a>
+
+        <a href="index.html#contact">Contact</a>
+
+    </nav>
+
+    <a href="https://wa.me/917902825149?text=Hello%20Ummi%20Heavens,%20I%20would%20like%20to%20place%20an%20order."
+       class="header-whatsapp">
+        Order on WhatsApp
+    </a>
+
+</header>
+
+<section class="category-section">
+
+    <div class="categories-title">
+
+        <span>OUR COLLECTION</span>
+
+        <h1>Premium Products From Nature</h1>
+
+        <p>
+            Explore our carefully selected premium categories.
+        </p>
+
+    </div>
+
+    <div class="category-grid">
+        <!-- RAW SPICES -->
+<div class="category-card category-btn" data-category="Raw Spices">
+
+    <img src="assets/category/raw-spices.jpg" class="category-image" alt="Raw Spices">
+
+    <h2>Raw Spices</h2>
+
+    <p>Premium whole spices selected directly from nature.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+  
+
+<!-- SPICE POWDERS -->
+<div class="category-card category-btn" data-category="Spice Powders">
+
+    <img src="assets/category/spice-powders.jpg" class="category-image" alt="Spice Powders">
+
+    <h2>Spice Powders</h2>
+
+    <p>Freshly prepared powders with natural aroma.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- PURE HONEY -->
+<div class="category-card category-btn" data-category="Pure Honey">
+
+    <img src="assets/category/honey.jpg" class="category-image" alt="Honey">
+
+    <h2>Pure Honey</h2>
+
+    <p>100% natural and unprocessed honey.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- PURE GHEE -->
+<div class="category-card category-btn" data-category="Pure Ghee">
+
+    <img src="assets/category/ghee.jpg" class="category-image" alt="Ghee">
+
+    <h2>Pure Ghee</h2>
+
+    <p>Traditional rich and aromatic ghee.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- COCONUT OIL -->
+<div class="category-card category-btn" data-category="Coconut Oils">
+
+    <img src="assets/category/coconut-oil.jpg" class="category-image" alt="Coconut Oil">
+
+    <h2>Coconut Oil</h2>
+
+    <p>Pure cold-pressed coconut oil.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- TEA -->
+<div class="category-card category-btn" data-category="Tea Powders">
+
+    <img src="assets/category/tea-powder.jpg" class="category-image" alt="Tea Powder">
+
+    <h2>Tea Powder</h2>
+
+    <p>Premium fresh tea powder.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+<!-- DRY FRUITS -->
+<div class="category-card category-btn" data-category="Dry Fruits">
+
+    <img src="assets/category/dry-fruits.jpg" class="category-image" alt="Dry Fruits">
+
+    <h2>Dry Fruits</h2>
+
+    <p>Premium quality dry fruits.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- PREMIUM CHIPS -->
+<div class="category-card category-btn" data-category="Premium Chips">
+
+    <img src="assets/category/chips.jpg" class="category-image" alt="Premium Chips">
+
+    <h2>Premium Chips</h2>
+
+    <p>Authentic Kerala banana chips.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+<!-- SIGNATURE BOX -->
+<div class="category-card category-btn" data-category="Ummi Signature Box">
+
+    <img src="assets/category/signature-box.jpg" class="category-image" alt="Signature Box">
+
+    <h2>Ummi Signature Box</h2>
+
+    <p>Create your own custom gift box.</p>
+
+    <button type="button">Explore →</button>
+
+</div>
+
+</div>
+<!-- ================= CATEGORY POPUP ================= -->
+
+<div id="categoryModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-modal">&times;</span>
+
+        <h2 id="modalTitle">Category</h2>
+
+        <div id="modalProducts" class="modal-products"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PRODUCT POPUP ================= -->
+
+<div id="productModal" class="modal">
+
+    <div class="modal-content product-box">
+
+        <span class="close-product">&times;</span>
+
+        <img id="productImage" src="assets/logo.png" alt="Product">
+
+        <h2 id="productName">Product Name</h2>
+
+        <p>Select Packaging</p>
+
+        <div class="option-group">
+
+            <button class="pack-option">Bottle</button>
+
+            <button class="pack-option">Pouch</button>
+
+        </div>
+
+
+        <p>Select Weight</p>
+
+        <div class="option-group">
+
+            <button class="weight-option">100g</button>
+
+            <button class="weight-option">250g</button>
+
+            <button class="weight-option">500g</button>
+
+            <button class="weight-option">1kg</button>
+
+        </div>
+
+
+        <p>Quantity</p>
+
+        <div class="quantity-box">
+
+            <button id="minus">-</button>
+
+            <span id="quantity">1</span>
+
+            <button id="plus">+</button>
+
+        </div>
+
+
+        <button id="buyWhatsapp" class="buy-btn">
+
+            Buy Now on WhatsApp
+
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+<!-- ================= SIGNATURE BOX POPUP ================= -->
+
+<div id="signatureModal" class="modal">
+
+    <div class="modal-content signature-box">
+
+        <span class="close-signature">&times;</span>
+
+
+        <img src="assets/logo.png" class="signature-logo" alt="Ummi Heavens">
+
+
+        <h2>Ummi Signature Box</h2>
+
+        <p>
+            Build your own premium gift box by selecting any 4 products.
+        </p>
+
+
+        <div class="signature-slots">
+
+
+            <div class="signature-slot">
+
+                <div class="slot-number">1</div>
+
+                <select id="slot1">
+                    <option value="">Select Product</option>
+                </select>
+
+            </div>
+
+
+
+            <div class="signature-slot">
+
+                <div class="slot-number">2</div>
+
+                <select id="slot2">
+                    <option value="">Select Product</option>
+                </select>
+
+            </div>
+
+
+
+            <div class="signature-slot">
+
+                <div class="slot-number">3</div>
+
+                <select id="slot3">
+                    <option value="">Select Product</option>
+                </select>
+
+            </div>
+
+
+
+            <div class="signature-slot">
+
+                <div class="slot-number">4</div>
+
+                <select id="slot4">
+                    <option value="">Select Product</option>
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="signature-preview">
+
+    <div class="box-slot">
+        <img src="assets/logo.png">
+    </div>
+
+    <div class="box-slot">
+        <img src="assets/logo.png">
+    </div>
+
+    <div class="box-slot">
+        <img src="assets/logo.png">
+    </div>
+
+    <div class="box-slot">
+        <img src="assets/logo.png">
+    </div>
+
+</div>
+
+
+
+        <p>Quantity</p>
+
+
+        <div class="quantity-box">
+
+            <button id="signatureMinus">-</button>
+
+            <span id="signatureQuantity">1</span>
+
+            <button id="signaturePlus">+</button>
+
+        </div>
+
+
+
+        <button id="signatureBuy" class="buy-btn">
+
+    Order Signature Box
+
+</button>
+<!-- Scroll To Top Button -->
+
+<button id="scrollTopBtn">⬆</button>
+<!-- Floating WhatsApp Button -->
+
+<a href="https://wa.me/917902825149?text=Hello%20Ummi%20Heavens,%20I%20would%20like%20to%20place%20an%20order."
+   class="floating-whatsapp"
+   target="_blank">
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp">
+
+</a>
+
+</a>
+<script src="products.js"></script>
+
+
+</body>
+
+</html>
