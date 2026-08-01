@@ -14,8 +14,7 @@ const leafImages = [
 ];
 
 const leaves = [];
-const TOTAL_LEAVES = 220;
-
+const TOTAL_LEAVES = window.innerWidth < 768 ? 60 : 220;
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 
@@ -140,7 +139,7 @@ setTimeout(() => {
 
     }, 900);
 
-}, 5000);
+}, 3000);
 // =====================================
 // CATEGORY MODAL
 // =====================================
