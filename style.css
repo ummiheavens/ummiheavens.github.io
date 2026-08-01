@@ -2796,3 +2796,47 @@ overflow-y:auto;
     }
 
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .hero{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 25px 60px;
+        min-height: auto;
+        gap: 40px;
+    }
+
+    .hero-left{
+        width:100%;
+    }
+
+    .hero-left h1{
+        font-size:48px;
+        line-height:1.1;
+    }
+
+    .hero-left p{
+        font-size:18px;
+        max-width:100%;
+    }
+
+    .hero-right{
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
+
+    .hero-right img{
+        width:260px;
+        max-width:80%;
+    }
+
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+}
