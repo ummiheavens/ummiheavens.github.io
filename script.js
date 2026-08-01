@@ -318,3 +318,28 @@ if (scrollTopBtn) {
     };
 
 }
+// ================= MOBILE MENU =================
+
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.querySelector(".header-nav");
+
+if(menuToggle && navMenu){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navMenu.classList.toggle("active");
+
+    });
+
+
+    document.querySelectorAll(".header-nav a").forEach(link => {
+
+        link.addEventListener("click",()=>{
+
+            navMenu.classList.remove("active");
+
+        });
+
+    });
+
+}
