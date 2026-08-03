@@ -5,6 +5,8 @@
 
 const splash = document.getElementById("splash");
 const leafContainer = document.getElementById("leafContainer");
+// Detect Mobile
+const isMobile = window.innerWidth <= 768;
 
 const leafImages = [
     "assets/leaf1.png",
@@ -14,7 +16,7 @@ const leafImages = [
 ];
 
 const leaves = [];
-const TOTAL_LEAVES = window.innerWidth < 768 ? 60 : 220;
+const TOTAL_LEAVES = isMobile ? 12 : 220;
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
 
@@ -27,8 +29,9 @@ for (let i = 0; i < TOTAL_LEAVES; i++) {
     leaf.className = "leaf";
 
     // Random size
-    const size = 12 + Math.random() * 28;
-
+   const size = isMobile
+    ? 10 + Math.random() * 12
+    : 12 + Math.random() * 28;
     leaf.style.width = size + "px";
 
     // Layer
@@ -58,7 +61,9 @@ for (let i = 0; i < TOTAL_LEAVES; i++) {
 
         radius: 100 + Math.random() * Math.max(screenWidth, screenHeight),
 
-        speed: 0.001 + Math.random() * 0.003,
+        speed: isMobile
+    ? 0.0006 + Math.random() * 0.0005
+    : 0.001 + Math.random() * 0.003,
 
         offset: Math.random() * 1000,
 
@@ -139,7 +144,7 @@ setTimeout(() => {
 
     }, 900);
 
-}, 3000);
+}, isMobile ? 1800 : 4000);
 // =====================================
 // CATEGORY MODAL
 // =====================================
